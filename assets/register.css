@@ -1,0 +1,35 @@
+/* Estilos para el formulario de registro */
+
+/* Estilos para el título */
+h1 {
+  text-align: center;
+}
+
+/* Estilos para los campos del formulario */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+/* Estilos para el botón de enviar */
+.btn-primary {
+  display: block;
+  margin: 1.5rem auto;
+}
+
+/* Estilos para el mensaje de error de validación */
+.form-control:invalid {
+  border-color: red;
+}
+.form-control:invalid:focus {
+  box-shadow: none;
+}
+
+/* Estilos para el archivo subido */
+.form-control-file {
+  margin-top: .5rem;
+}
+
+/* Estilos para el contenedor del formulario */
+.container {
+  margin-top: 2rem;
+}
