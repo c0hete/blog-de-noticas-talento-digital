@@ -12,6 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 
+
 //initializations
 app.set('views', __dirname + '/views');
 app.use(express.static('public'));
