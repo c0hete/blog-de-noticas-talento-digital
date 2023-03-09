@@ -4,17 +4,14 @@ body {
 }
 
 body {
-  display: flex;
-  align-items: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background-color: #f5f5f5;
-}
+  background: rgb(47,167,179);
+  background: linear-gradient(139deg, rgba(47,167,179,1) 0%, rgba(149,179,47,1) 8%, rgba(135,255,12,1) 19%, rgba(211,246,20,1) 21%, rgba(35,203,57,0.9640990185136554) 30%, rgba(25,139,142,1) 71%, rgba(63,162,64,1) 85%, rgba(181,180,56,1) 100%); }
 
-.form-signin {
+
+ .form-signin {
   max-width: 330px;
   padding: 15px;
-}
+} 
 
 .form-signin .form-floating:focus-within {
   z-index: 2;
@@ -80,4 +77,4 @@ body {
   text-align: center;
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
-}
+} 

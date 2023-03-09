@@ -7,6 +7,12 @@ const PORT = process.env.PORT || 4000;
 const initializePassport = require("./config/passportConfig");
 const router = require('./routes/userRoutes');
 const bodyParser = require('body-parser');
+const LocalStrategy = require('passport-local').Strategy;
+const { pool } = require('./config/dbConfig');
+const userRouter = require('./routes/userRoutes');
+const passportConfig = require('./config/passportConfig');
+
+
 // Configuración de body-parser
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -14,6 +20,7 @@ app.use(bodyParser.json());
 
 
 //initializations
+
 app.set('views', __dirname + '/views');
 app.use(express.static('public'));
 

@@ -4,13 +4,16 @@ const { pool } = require("../config/dbConfig");
 const bcrypt = require("bcrypt");
 const path = require("path");
 const router = Router();
-const passport = require("passport");
+const passport = require('passport');
+const passportConfig = require('../config/passportConfig');
 const multer = require("multer");
 const bodyParser = require('body-parser');
 const app = express();
 // Configuración de body-parser
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+router.use(passport.initialize());
+router.use(passport.session());
 
 //MULTER
 // Definir el almacenamiento para los archivos cargados
@@ -42,9 +45,8 @@ router.get("/users/login", (req, res) => res.render("login"));
 
 router.get("/users/register", (req, res) => res.render("register"));
 
-router.get("/users/dashboard", (req, res) =>
-  res.render("dashboard", { user: req.user.name })
-);
+router.get('/users/dashboard', (req,res)=>
+res.render("dashboard", {user: req.user.name}));
 
 router.get("/users/logout", (req, res) => {
   req.logout(function (err) {
@@ -119,6 +121,10 @@ router.post("/users/register", async (req,res) => {
       }
     );
   }
+});
+
+app.get('/dashboard', function(req, res) {
+  res.render('dashboard');
 });
 
 router.post("/users/login", passport.authenticate('local', {

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/assets/login.css" />
+    <link rel="stylesheet" href="/assets/index.css">
     <link rel="stylesheet" href="/assets/footer.css" />
     <title>Noticias al Instante</title>
     <link
@@ -34,9 +34,8 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="/users/login">Sign UP</a>
-              <a class="nav-link" href="/users/register">Register</a>
-             
+              <a class="nav-link active" aria-current="page" href="/users/login">Ingresa</a>
+              <a class="nav-link" href="/users/register">Registrate</a>      
             </div>
           </div>
         </div>
@@ -44,15 +43,18 @@
     </header>
 
     <div class="px-4 py-5 my-5 text-center">
-      <img class="d-block mx-auto mb-4" src="../public/assets/img/noticias-y-jóvenes-e1629188625929.jpg" alt="" width="72" height="57">
+      <img class="d-block mx-auto mb-4" src="../assets/img/noticias-y-jóvenes-e1629188625929.jpg" alt="" width="400" height="200">
       <h1 class="display-5 fw-bold">Noticias al Instante</h1>
+      <% if (typeof message !== 'undefined' ) { %>
+        <p><%= message %></p>
+        <% } %>
       <div class="col-lg-6 mx-auto">
         <p class="lead mb-4">Deseas enterarte de todas las noticias de la actualidad? Unete a este, el mejor blog de noticias de la actualidad. </p>
           <p class="lead mb-4"> No esperes mas!. </p>
-          <p class="lead mb-4">Registrate y si ya tienes cuenta, ingresa!</p>
+          <p class="lead mb-4">Registrate y si ya tienes cuenta, Ingresa!</p>
         <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-          <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button>
-          <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button>
+          <a class="fw-bold .fs-2 .text-info" aria-current="page" href="/users/login">Ingresa</a>
+         <a class="fw-bold .fs-2 .text-info" href="/users/register">Registrate</a>
         </div>
       </div>
     </div>

@@ -1,35 +1,15 @@
 /* Estilos para el formulario de registro */
 
-/* Estilos para el título */
-h1 {
-  text-align: center;
+html,
+body {
+  height: 100%;
 }
 
-/* Estilos para los campos del formulario */
-.form-group {
-  margin-bottom: 1.5rem;
-}
+body {
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background: rgb(47,167,179);
+  background: linear-gradient(139deg, rgba(47,167,179,1) 0%, rgba(149,179,47,1) 8%, rgba(135,255,12,1) 19%, rgba(211,246,20,1) 21%, rgba(35,203,57,0.9640990185136554) 30%, rgba(25,139,142,1) 71%, rgba(63,162,64,1) 85%, rgba(181,180,56,1) 100%); }
 
-/* Estilos para el botón de enviar */
-.btn-primary {
-  display: block;
-  margin: 1.5rem auto;
-}
-
-/* Estilos para el mensaje de error de validación */
-.form-control:invalid {
-  border-color: red;
-}
-.form-control:invalid:focus {
-  box-shadow: none;
-}
-
-/* Estilos para el archivo subido */
-.form-control-file {
-  margin-top: .5rem;
-}
-
-/* Estilos para el contenedor del formulario */
-.container {
-  margin-top: 2rem;
-}
