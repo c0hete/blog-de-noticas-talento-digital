@@ -99,7 +99,7 @@ router.post("/users/register", async (req,res) => {
           throw err;
         }
       
-        console.log(results.rows);
+      
         if(results.rows.length > 0 ){
           errors.push({message: "Email already registered"})
           res.render('register', {errors});
@@ -112,7 +112,7 @@ router.post("/users/register", async (req,res) => {
               if (err){
                 throw err
               }
-              console.log(results.rows)
+            
               req.flash('success_msg', "You are now registered. Please log in");
               res.redirect('/users/login');
             }

@@ -8,10 +8,12 @@ const initializePassport = require("./config/passportConfig");
 const router = require('./routes/userRoutes');
 const bodyParser = require('body-parser');
 const LocalStrategy = require('passport-local').Strategy;
-const { pool } = require('./config/dbConfig');
-const userRouter = require('./routes/userRoutes');
 const passportConfig = require('./config/passportConfig');
+const { Pool } = require('./config/dbConfig');
+const dotenv = require('dotenv');
 
+
+dotenv.config();
 
 // Configuración de body-parser
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -29,7 +31,7 @@ app.set('view engine', 'ejs')
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json())
 app.use(session({
-  secret: 'secret',
+  secret: process.env.SESSION_SECRET,
   saveUninitialized: false,
   saveUntialized: false,
   resave: false,

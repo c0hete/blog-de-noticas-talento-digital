@@ -78,12 +78,11 @@
     <link href="blog.css" rel="stylesheet">
   </head>
   <body>
-    
 <div class="container">
   <header class="blog-header lh-1 py-3">
     <div class="row flex-nowrap justify-content-between align-items-center">
       <div class="col-4 pt-1">
-        <a class="link-secondary" href="#">Subscribe</a>
+        <a class="link-secondary" href="#">Bienvenido <%= user.charAt(0).toUpperCase() + user.slice(1) %></a>
       </div>
       <div class="col-4 text-center">
         <a class="blog-header-logo text-dark" href="#">Large</a>
@@ -118,8 +117,9 @@
 <main class="container">
   <div class="p-4 p-md-5 mb-4 rounded text-bg-dark">
     <div class="col-md-6 px-0">
-      <h1 class="display-4 fst-italic">Title of a longer featured blog post</h1>
-      <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.</p>
+      <h1 class="display-4 fst-italic">"Descubren una nueva especie de animal en la selva amazónica"</h1>
+      
+      <p class="lead my-3">Un grupo de científicos ha descubierto una nueva especie de animal en la selva amazónica, se trata de un pequeño mamífero de unos 20 centímetros de largo con un pelaje marrón oscuro y manchas blancas en su rostro. Los científicos han nombrado a la nueva especie "Microcebus amazonicus". Según los expertos, esta especie ha evolucionado para adaptarse a las condiciones extremas de la selva amazónica y es capaz de trepar árboles con gran agilidad. Este descubrimiento es una gran noticia para la comunidad científica y podría ayudar a entender mejor la biodiversidad de la región amazónica..</p>
       <p class="lead mb-0"><a href="#" class="text-white fw-bold">Continue reading...</a></p>
     </div>
   </div>
@@ -321,7 +321,7 @@
   </div>
 
 </main>
-    <h1>Hello <%= user.charAt(0).toUpperCase() + user.slice(1) %></h1>
+   
     
 
  
