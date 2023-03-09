@@ -4,14 +4,19 @@ const session = require('express-session')
 const flash = require("express-flash");
 const passport = require('passport')
 const PORT = process.env.PORT || 4000;
-const initizalizePassport = require("./config/passportConfig");
+const initializePassport = require("./config/passportConfig");
+const router = require('./routes/userRoutes');
+const bodyParser = require('body-parser');
+// Configuración de body-parser
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 
 //initializations
 app.set('views', __dirname + '/views');
 app.use(express.static('public'));
 
-initizalizePassport(passport);
+initializePassport(passport);
 app.set('view engine', 'ejs')
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json())
@@ -28,6 +33,7 @@ app.use(session({
 app.use(passport.initialize())
 app.use(passport.session())
 app.use(flash());
+
 
 
 //Rutas
